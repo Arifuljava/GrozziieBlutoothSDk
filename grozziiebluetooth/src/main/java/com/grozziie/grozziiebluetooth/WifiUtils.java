@@ -13,7 +13,6 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-import static com.grozziie.grozziie_aaam.wifi.Constants.WIFI_MAX_LEVEL;
 
 
 public class WifiUtils {
