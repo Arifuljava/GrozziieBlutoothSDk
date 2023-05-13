@@ -138,7 +138,7 @@ public class Device_CategoryActivity extends AppCompatActivity {
 
         if (wifiInfo.isConnected()) {
             // WiFi is connected
-            startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
+           // startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
         } else {
             // WiFi is not connected
             String  defaultlanguage= Locale.getDefault().getDisplayLanguage();
@@ -161,7 +161,7 @@ public class Device_CategoryActivity extends AppCompatActivity {
 
                         if (wifiInfo.isConnected()) {
                             // WiFi is connected
-                            startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
+                           // startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
                         }
                         else {
                             Toasty.error(getApplicationContext(),"Your wifi is disable now. Do you want to enable it?",Toasty.LENGTH_SHORT,true).show();
@@ -194,7 +194,7 @@ public class Device_CategoryActivity extends AppCompatActivity {
 
                         if (wifiInfo.isConnected()) {
                             // WiFi is connected
-                            startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
+                         ///   startActivity(new Intent(getApplicationContext(), WifiListActivity.class));
                         }
                         else {
                             Toasty.error(getApplicationContext(),"您的 wifi 现在已禁用。你想启用它吗？",Toasty.LENGTH_SHORT,true).show();

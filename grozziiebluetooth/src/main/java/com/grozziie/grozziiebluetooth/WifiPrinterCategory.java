@@ -121,7 +121,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
 
                                 }
                                 else {
-                                    startActivity(new Intent(getApplicationContext(),WifiImagePrint.class));
+                                   /// startActivity(new Intent(getApplicationContext(),WifiImagePrint.class));
                                 }
 
                             }
@@ -147,7 +147,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
 
                                 }
                                 else {
-                                    startActivity(new Intent(getApplicationContext(),WifiImagePrint.class));
+                                  ///  startActivity(new Intent(getApplicationContext(),WifiImagePrint.class));
                                 }
 
                             }
@@ -191,7 +191,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
                                 if (which==0) {
                                 }
                                 else if(which==1) {
-                                    startActivity(new Intent(getApplicationContext(),WifiPrintPdf.class));
+                                   /// startActivity(new Intent(getApplicationContext(),WifiPrintPdf.class));
 
                                 }
 
@@ -253,7 +253,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
                                     GotoPrint();;
                                 }
                                 else {
-                                    startActivity(new Intent(getApplicationContext(),WifiWebPagePrint.class));
+                                   /// startActivity(new Intent(getApplicationContext(),WifiWebPagePrint.class));
                                 }
 
                             }
@@ -272,7 +272,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
                                     GotoPrint();;
                                 }
                                 else {
-                                    startActivity(new Intent(getApplicationContext(),WifiWebPagePrint.class));
+                                  //  startActivity(new Intent(getApplicationContext(),WifiWebPagePrint.class));
                                 }
 
                             }
@@ -280,7 +280,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
                 builder.show();
             }
 
-            startActivity(new Intent(getApplicationContext(), WifiWebPagePrint.class));
+          ///  startActivity(new Intent(getApplicationContext(), WifiWebPagePrint.class));
         }
         else {
             String  defaultlanguage= Locale.getDefault().getDisplayLanguage();
@@ -300,7 +300,7 @@ public class WifiPrinterCategory extends AppCompatActivity {
     }
     public void historyprint(View view) {
         if (iscunnectWifi()==true) {
-            startActivity(new Intent(getApplicationContext(), WifiWebPagePrint.class));
+            ///startActivity(new Intent(getApplicationContext(), WifiWebPagePrint.class));
         }
         else {
             String  defaultlanguage= Locale.getDefault().getDisplayLanguage();
