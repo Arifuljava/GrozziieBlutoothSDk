@@ -1,5 +1,6 @@
 package com.grozziie.grozziiebluetooth;
 
+
 public class PrinterCommands {
     public static final byte HT = 0x9;
     public static final byte LF = 0x0A;
@@ -53,4 +54,5 @@ public class PrinterCommands {
 
     public static final byte[] ESC_ENTER = new byte[] { 0x1B, 0x4A, 0x40 };
     public static final byte[] PRINTE_TEST = new byte[] { 0x1D, 0x28, 0x41 };
+
 }
