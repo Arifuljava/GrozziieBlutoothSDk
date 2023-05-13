@@ -22,6 +22,7 @@
         <activity android:name=".PrintBluetoothcategory" />
         <activity android:name=".BitMapConvertActivity" />
         <activity android:name=".BluetoothList" />
+        <activity android:name=".DeviceList" />
         <activity android:name=".Device_CategoryActivity" />
         <activity android:name=".InitilizeSDKActivity" />
     </application>
