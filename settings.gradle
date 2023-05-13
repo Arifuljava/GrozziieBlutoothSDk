@@ -1,0 +1,3 @@
+include ':grozziiebluetooth'
+include ':app'
+rootProject.name = "GrozziieBlutoothSDk"
