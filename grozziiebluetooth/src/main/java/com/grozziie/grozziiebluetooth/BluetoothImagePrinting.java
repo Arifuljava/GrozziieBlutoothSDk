@@ -3,8 +3,10 @@ package com.grozziie.grozziiebluetooth;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
 
 import android.Manifest;
+import android.app.NotificationManager;
 import android.bluetooth.BluetoothSocket;
 import android.content.Context;
 import android.content.Intent;
@@ -338,6 +340,7 @@ public class BluetoothImagePrinting extends AppCompatActivity {
         else{
             int n=Integer.parseInt(amount_page.getText().toString());
             for (int i=0;i<n;i++) {
+                getnotification(i+1);
                 OutputStream opstream = null;
                 try {
                     opstream = btsocket.getOutputStream();
@@ -385,6 +388,25 @@ public class BluetoothImagePrinting extends AppCompatActivity {
 
         }
     }
+
+    private void getnotification(int i) {
+        Toast.makeText(this, ""+i, Toast.LENGTH_SHORT).show();
+        String notifiongettings= String.valueOf(i);
+        String noti_number  = "Printer  number : "+notifiongettings;
+        NotificationCompat.Builder  builder=new NotificationCompat.Builder(BluetoothImagePrinting.this);
+        builder.setAutoCancel(false)
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setTicker("Your printing request is  on processing . \n"+noti_number)
+                .setContentTitle("Printer Notification")
+                .setContentText("Your printing request is  on processing . \n"+noti_number)
+                .setContentInfo("Information");
+        NotificationManager nm=(NotificationManager)this.getApplicationContext()
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.notify(1,builder.build());
+    }
+
     //print custom
     private void printCustom(String msg, int size, int align) {
         //Print config "mode"
@@ -453,6 +475,22 @@ public class BluetoothImagePrinting extends AppCompatActivity {
             }else{
                 Log.e("Print Photo error", "the file isn't exists");
             }
+
+            ///print noyification
+            String notifiongettings= String.valueOf(10);
+            String noti_number  = "Printer  number : "+notifiongettings;
+            NotificationCompat.Builder  builder=new NotificationCompat.Builder(BluetoothImagePrinting.this);
+            builder.setAutoCancel(false)
+                    .setDefaults(NotificationCompat.DEFAULT_ALL)
+                    .setWhen(System.currentTimeMillis())
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setTicker("Your printing request is  on processing . \n"+noti_number)
+                    .setContentTitle("Printer Notification")
+                    .setContentText("Your printing request is  on processing . \n"+noti_number)
+                    .setContentInfo("Information");
+            NotificationManager nm=(NotificationManager)this.getApplicationContext()
+                    .getSystemService(Context.NOTIFICATION_SERVICE);
+            nm.notify(1,builder.build());
         } catch (Exception e) {
             e.printStackTrace();
             Log.e("PrintTools", "the file isn't exists");

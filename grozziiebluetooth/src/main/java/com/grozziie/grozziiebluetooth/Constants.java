@@ -31,5 +31,7 @@ public interface Constants {
      */
     long TIME_REFRESH_WIFI_INTERVAL = 2000L;
     String KEY_WIFI_SSID = "SSID";
+    String wifiSSD= "SSID";
+
 
 }

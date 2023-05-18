@@ -14,6 +14,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -316,25 +317,30 @@ public class BluetoothList extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
-                                if (listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||
-                                        listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-5502")||
-                                        listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-0022")||
-                                        listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||
-                                        listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||listPairedBluetoothDevices.get(position).getName().toLowerCase().equals("ac695x_1")||listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gd610")||
-                                        listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gd620")||listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gzp660")
-                                        || listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("tjyd600")|| listDetectBluetoothDevices.get(position)
-                                        .getName().toLowerCase().equals("tjyd610")||listDetectBluetoothDevices.get(position).
-                                        getName().toLowerCase().equals("tjyd620")) {
-                                    startActivity(new Intent(getApplicationContext(), PrintBluetoothcategory.class));
-
-
-
-
-                                    return;
+                                if (TextUtils.isEmpty(listDetectBluetoothDevices.get(position).getName())) {
                                 }
                                 else {
-                                    startActivity(new Intent(getApplicationContext(), PrintBluetoothcategory.class));
+                                    if (listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||
+                                            listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-5502")||
+                                            listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-0022")||
+                                            listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||
+                                            listDetectBluetoothDevices.get(position).getName().toLowerCase().contains("gd610-ece5")||listPairedBluetoothDevices.get(position).getName().toLowerCase().equals("ac695x_1")||listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gd610")||
+                                            listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gd620")||listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("gzp660")
+                                            || listDetectBluetoothDevices.get(position).getName().toLowerCase().equals("tjyd600")|| listDetectBluetoothDevices.get(position)
+                                            .getName().toLowerCase().equals("tjyd610")||listDetectBluetoothDevices.get(position).
+                                            getName().toLowerCase().equals("tjyd620")) {
+                                        startActivity(new Intent(getApplicationContext(), PrintBluetoothcategory.class));
+
+
+
+
+                                        return;
+                                    }
+                                    else {
+                                        startActivity(new Intent(getApplicationContext(), PrintBluetoothcategory.class));
+                                    }
                                 }
+
                             }
                         }).create();
                         builder.show();

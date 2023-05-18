@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
- ///implementation 'com.github.Arifuljava:GrozziieBlutoothSDk:v1.0.0'
+ implementation 'com.github.Arifuljava:GrozziieBlutoothSDk:v1.0.1'
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
